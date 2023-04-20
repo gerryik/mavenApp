@@ -130,13 +130,13 @@
                      <version>2.13</version>
                  </plugin>
 		
-		<plugins>
+		<plugin>
 		    <groupId>sp.sd</groupId>
 		    <artifactId>nexus-artifact-uploader</artifactId>
 		    <version>2.14</version>
-		</plugins>
-			
-		</plugins>
+		</plugin>
+	</plugins>	
+		
 	</build>
 
 
