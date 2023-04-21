@@ -119,14 +119,20 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-		<plugin>
+			<plugin>
+                       <groupId>sp.sd</groupId>
+                       <artifactId>nexus-artifact-uploader</artifactId>
+                       <version>2.13</version>
+                   </plugin>
+			<plugin>
                      <groupId>sp.sd</groupId>
                      <artifactId>nexus-artifact-uploader</artifactId>
                      <version>2.13</version>
                  </plugin>
-
-	</plugins>	
+		
+		</plugins>
 	</build>
-</project>
 
+
+</project>
 
