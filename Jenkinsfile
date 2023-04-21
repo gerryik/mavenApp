@@ -6,6 +6,7 @@ pipeline {
   stages{
     stage('1-git-clone'){
       steps{
+
         checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'jenkinsacct', url: 'https://github.com/gerryik/mavenApp.git']])
       }
     }
@@ -26,7 +27,7 @@ pipeline {
     }
     stage('sonarscanner'){
       steps{
-      sh 'mvn clean verify sonar:sonar \
+      sh "mvn clean verify sonar:sonar \
   -Dsonar.projectKey=team5codereview \
   -Dsonar.projectName="team5codereview" \
   -Dsonar.host.url=http://192.168.56.11:9000 \
