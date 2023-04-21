@@ -27,7 +27,7 @@ pipeline {
     }
     stage('sonarscanner'){
       steps{
-      sh 'mvn sonar:sonar \
+      sh 'mvn clean package sonar:sonar \
         -Dsonar.projectKey=sonarqTest \
         -Dsonar.projectName="sonarqTest" \
         -Dsonar.host.url=http://192.168.56.11:9000 \
