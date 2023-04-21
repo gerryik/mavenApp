@@ -27,11 +27,11 @@ pipeline {
     }
     stage('sonarscanner'){
       steps{
-      sh 'mvn sonar:sonar \
-  -Dsonar.projectKey=team5codereview \
-  -Dsonar.projectName="team5codereview" \
-  -Dsonar.host.url=http://192.168.56.11:9000 \
-  -Dsonar.token=sqp_bf870e758f88b8785f26ce78f75af5c144e47688'
+      sh 'mvn clean verify sonar:sonar \
+        -Dsonar.projectKey=sonarqTest \
+        -Dsonar.projectName="sonarqTest' \
+        -Dsonar.host.url=http://192.168.56.11:9000 \
+        -Dsonar.token=sqp_7995a5b14b0cfe05c55e1cec033385fa45b6976c'
       }
     }
   }
