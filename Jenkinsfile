@@ -20,14 +20,14 @@ pipeline {
         sh 'mvn package'
       }
     }
-      stage('unittest'){
-        steps{
-            sh 'mvn test'
-        }
-    }
+
     stage('sonarscanner'){
       steps{
-echo "--"
+      sh 'mvn clean sonar:sonar \
+        -Dsonar.projectKey=sonarqTest \
+        -Dsonar.projectName="sonarqTest" \
+        -Dsonar.host.url=http://192.168.56.11:9000 \
+        -Dsonar.token=sqp_7995a5b14b0cfe05c55e1cec033385fa45b6976c'
       }
     }
   }
